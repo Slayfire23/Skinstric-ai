@@ -2,6 +2,7 @@ import React from 'react'
 import LeftButton from '../components/LeftButton'
 import ProceedButton from '../components/ProceedButton'
 import { useState } from 'react'
+import Nav from '../components/Nav'
 
 function Landing() {
   const [hoveredSide, setHoveredSide] = useState(null);
@@ -22,6 +23,7 @@ function Landing() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#fcfcfc] text-black">
+       <Nav showEnterCode={true} />
         <section
             className={`absolute top-1/2 max-w-[720px] -translate-y-1/2 text-center text-[56px] font-normal leading-none transition-all duration-500 ease-out md:text-[72px] ${titlePosition}`}
         >

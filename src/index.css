@@ -3,3 +3,45 @@
 * {
     font: 'Roobert TRIAL', sans-serif;
 }
+
+@keyframes diamond-spin-slow {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes diamond-spin-medium {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(-315deg);
+    }
+}
+
+@keyframes diamond-spin-fast {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(405deg);
+    }
+}
+
+.animate-diamond-slow {
+    animation: diamond-spin-slow 28s linear infinite;
+}
+
+.animate-diamond-medium {
+    animation: diamond-spin-medium 20s linear infinite;
+}
+
+.animate-diamond-fast {
+    animation: diamond-spin-fast 14s linear infinite;
+}

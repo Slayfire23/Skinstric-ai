@@ -1,17 +1,18 @@
-import { useState } from 'react'
 import './App.css'
-import Nav from './components/Nav'
 import Landing from './pages/Landing'
+import IntroForm from './pages/IntroForm'
+import Upload from './pages/Upload'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Nav />
-      <Landing />
-
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/intro" element={<IntroForm />} />
+        <Route path="/upload" element={<Upload />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
