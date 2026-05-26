@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Nav from '../components/Nav'
 import BackButton from '../components/BackButton'
 import NextButton from '../components/NextButton'
@@ -81,11 +81,11 @@ const IntroForm = () => {
       <Nav showEnterCode={false} />
 
       <main className="relative min-h-screen overflow-hidden bg-[#fcfcfc] text-[#1a1b1c]">
-        <p className="absolute left-8 top-[86px] text-[16px] font-semibold leading-none text-[#1a1b1c] uppercase">
+        <p className="absolute left-5 top-[86px] text-[14px] font-semibold uppercase leading-none text-[#1a1b1c] md:left-8 md:text-[16px]">
           To start analysis
         </p>
 
-        <section className="absolute left-1/2 top-1/2 flex h-[min(520px,80vw)] w-[min(520px,80vw)] -translate-x-1/2 -translate-y-1/2 items-center justify-center">
+        <section className="absolute left-1/2 top-1/2 flex h-[min(520px,86vw)] w-[min(520px,86vw)] -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <div className="animate-diamond-fast pointer-events-none absolute h-[min(360px,56vw)] w-[min(360px,56vw)] border border-dotted border-[#1a1b1c]/55"></div>
           <div className="animate-diamond-medium pointer-events-none absolute h-[min(420px,66vw)] w-[min(420px,66vw)] border border-dotted border-[#1a1b1c]/35"></div>
           <div className="animate-diamond-slow pointer-events-none absolute h-[min(480px,76vw)] w-[min(480px,76vw)] border border-dotted border-[#1a1b1c]/20"></div>

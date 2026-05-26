@@ -1,4 +1,3 @@
-import React from 'react'
 import leftbtn from "../assets/backbtn.svg";
 
 function LeftButton({ onClick, onMouseEnter, onMouseLeave, isHidden }) {
@@ -6,13 +5,13 @@ function LeftButton({ onClick, onMouseEnter, onMouseLeave, isHidden }) {
     <div 
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className={`group fixed left-8 top-1/2 z-10 -translate-y-1/2 transition-opacity duration-300 ${
+    className={`group fixed bottom-5 left-5 z-10 transition-opacity duration-300 md:left-8 md:top-1/2 md:bottom-auto md:-translate-y-1/2 ${
         isHidden ? "pointer-events-none opacity-0" : "opacity-100"
       }`}>
-      <div className="pointer-events-none absolute left-[-190px] top-1/2 h-[320px] w-[320px] -translate-y-1/2 rotate-45 border border-dotted border-gray-500"></div>
-      <div className="pointer-events-none absolute left-[-235px] top-1/2 h-[410px] w-[410px] -translate-y-1/2 rotate-45 border border-dotted border-gray-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+      <div className="pointer-events-none absolute left-[-190px] top-1/2 hidden h-[320px] w-[320px] -translate-y-1/2 rotate-45 border border-dotted border-gray-500 md:block"></div>
+      <div className="pointer-events-none absolute left-[-235px] top-1/2 hidden h-[410px] w-[410px] -translate-y-1/2 rotate-45 border border-dotted border-gray-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:block"></div>
 
-      <div className="pointer-events-none absolute left-[-280px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rotate-45 border border-dotted border-gray-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+      <div className="pointer-events-none absolute left-[-280px] top-1/2 hidden h-[500px] w-[500px] -translate-y-1/2 rotate-45 border border-dotted border-gray-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:block"></div>
 
       <button
         onClick={onClick}
