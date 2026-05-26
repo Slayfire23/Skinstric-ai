@@ -1,7 +1,15 @@
 import React from 'react'
 import proceedbtn from "../assets/proceedbtn.svg";
+import { Link } from 'react-router-dom'
 
-function ProceedButton({ onClick, onMouseEnter, onMouseLeave, isHidden }) {
+function ProceedButton({
+  label = 'Take Test',
+  to = '/intro',
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  isHidden,
+}) {
   return (
     <div 
     onMouseEnter={onMouseEnter}
@@ -14,11 +22,12 @@ function ProceedButton({ onClick, onMouseEnter, onMouseLeave, isHidden }) {
 
       <div className="pointer-events-none absolute right-[-280px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rotate-45 border border-dotted border-gray-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-      <button
+      <Link
+        to={to}
         onClick={onClick}
         className="relative z-10 flex items-center gap-4 bg-transparent p-0 text-[12px] font-semibold uppercase tracking-wide text-black"
       >
-        <span>Take Test</span>
+        <span>{label}</span>
 
         <span className="relative flex h-12 w-12 items-center justify-center">
           <span className="absolute h-9 w-9 rotate-45 border border-black"></span>
@@ -29,7 +38,7 @@ function ProceedButton({ onClick, onMouseEnter, onMouseLeave, isHidden }) {
             className="relative z-10 h-3 w-3 translate-x-[1px] transition-transform duration-300 group-hover:scale-75"
           />
         </span>
-      </button>
+      </Link>
     </div>
   );
 }

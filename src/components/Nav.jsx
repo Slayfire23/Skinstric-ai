@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nav = () => {
+const Nav = ({ showEnterCode = true }) => {
   return (
     <nav className='fixed left-0 top-0 z-50 flex w-full items-center justify-between px-8 py-5'>
 
@@ -15,9 +15,11 @@ const Nav = () => {
 
       </div>
 
-      <button className='bg-black px-4 py-2 text-[10px] font-semibold tracking-wide text-white '>
-        Enter Code
-      </button>
+        {showEnterCode && (
+          <button className='bg-black px-4 py-2 text-[10px] font-semibold tracking-wide text-white '>
+            Enter Code
+          </button>
+        )}
     </nav>
   )
 }
