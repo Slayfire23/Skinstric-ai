@@ -49,9 +49,21 @@ const Analyzing = () => {
         <span className="animate-diamond-medium absolute h-[min(320px,70vw)] w-[min(320px,70vw)] border-2 border-dashed border-[#1a1b1c]/20"></span>
         <span className="animate-diamond-slow absolute h-[min(380px,82vw)] w-[min(380px,82vw)] border-2 border-dashed border-[#1a1b1c]/10"></span>
 
-        <p className="relative z-10 text-[12px] font-semibold uppercase tracking-wide">
-          Preparing your analysis ...
-        </p>
+        <div className="relative z-10 flex flex-col items-center text-center">
+          <p className="text-[12px] font-semibold uppercase tracking-wide">
+            Preparing your analysis ...
+          </p>
+
+          <div className="mt-8 flex w-[220px] flex-col items-center gap-3">
+            <span className="skeleton-shimmer h-[7px] w-full"></span>
+            <span className="skeleton-shimmer h-[7px] w-[76%]"></span>
+            <div className="mt-3 flex gap-3">
+              <span className="skeleton-shimmer h-3 w-3 rotate-45"></span>
+              <span className="skeleton-shimmer h-3 w-3 rotate-45"></span>
+              <span className="skeleton-shimmer h-3 w-3 rotate-45"></span>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )

@@ -9,6 +9,7 @@ const Upload = () => {
   const navigate = useNavigate()
   const fileInputRef = useRef(null)
   const [selectedFileName, setSelectedFileName] = useState('')
+  const [showCameraPrompt, setShowCameraPrompt] = useState(false)
 
   function handleGalleryClick() {
     fileInputRef.current?.click()
@@ -49,6 +50,7 @@ const Upload = () => {
           <button
             type="button"
             className="group relative h-[220px] w-[280px] shrink-0 -translate-y-16 scale-[0.68] bg-transparent sm:-translate-y-14 sm:scale-[0.78] lg:h-[320px] lg:w-[320px] lg:translate-y-0 lg:scale-100"
+            onClick={() => setShowCameraPrompt(true)}
           >
             <span className="animate-diamond-fast absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 border-2 border-dashed border-[#1a1b1c]/35 lg:h-[280px] lg:w-[280px]"></span>
             <span className="animate-diamond-medium absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 border-2 border-dashed border-[#1a1b1c]/20 lg:h-[320px] lg:w-[320px]"></span>
@@ -130,6 +132,35 @@ const Upload = () => {
           <p className="absolute bottom-20 left-1/2 max-w-[240px] -translate-x-1/2 truncate text-center text-[12px] font-semibold uppercase tracking-wide text-[#1a1b1c] md:bottom-8 md:max-w-[320px]">
             Selected: {selectedFileName}
           </p>
+        )}
+
+        {showCameraPrompt && (
+          <div className="absolute inset-0 z-40 flex items-center justify-center bg-[#fcfcfc]/70 px-5">
+            <div className="w-full max-w-[360px] border-2 border-[#1a9cff] bg-[#1a1b1c] text-white shadow-sm">
+              <div className="px-5 py-6">
+                <p className="text-[14px] font-semibold uppercase tracking-wide">
+                  Allow A.I. to access your camera
+                </p>
+              </div>
+
+              <div className="flex justify-end gap-8 border-t border-white/35 px-5 py-3">
+                <button
+                  type="button"
+                  className="text-[12px] font-semibold uppercase tracking-wide text-white/80"
+                  onClick={() => setShowCameraPrompt(false)}
+                >
+                  Deny
+                </button>
+                <button
+                  type="button"
+                  className="text-[12px] font-semibold uppercase tracking-wide text-white"
+                  onClick={() => navigate('/selfie')}
+                >
+                  Allow
+                </button>
+              </div>
+            </div>
+          </div>
         )}
 
         <div className="absolute bottom-16 left-0 md:bottom-8">
