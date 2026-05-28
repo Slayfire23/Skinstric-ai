@@ -2,6 +2,7 @@ import './App.css'
 import Landing from './pages/Landing'
 import IntroForm from './pages/IntroForm'
 import Upload from './pages/Upload'
+import Selfie from './pages/Selfie'
 import Analyzing from './pages/Analyzing'
 import Results from './pages/Results'
 import Demographics from './pages/Demographics'
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/intro" element={<IntroForm />} />
         <Route path="/upload" element={<Upload />} />
+        <Route path="/selfie" element={<Selfie />} />
         <Route path="/analyzing" element={<Analyzing />} />
         <Route path="/results" element={<Results />} />
         <Route path="/demographics" element={<Demographics />} />
