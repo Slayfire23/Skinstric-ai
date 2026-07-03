@@ -1,16 +1,42 @@
-# React + Vite
+Skinstric AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Skinstric AI is a React web app that recreates a skincare analysis flow. I built this project to practice creating a multi-step user experience with React, Vite, React Router, Tailwind CSS, form validation, image upload, camera access, API calls, and result pages.
 
-Currently, two official plugins are available:
+What The App Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This app guides users through a skincare analysis process. Users enter basic information, choose whether to use their camera or upload an image, wait while the image is analyzed, and then view estimated results like demographics.
 
-## React Compiler
+Main Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Landing Page -
+The landing page has a clean Skinstric-style design with animated hover interactions and a call-to-action to start the analysis.
 
-## Expanding the ESLint configuration
+Intro Form -
+Users enter their name and location before starting. The form checks that the input is valid and sends the data to the Skinstric phase-one API.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Upload Options -
+Users can choose between two options:
+
+Take a selfie with the camera -
+Upload an image from their gallery
+
+Camera Selfie -
+The selfie page asks for camera access, shows a live camera preview, lets the user capture an image, and saves the image for analysis.
+
+Image Upload -
+The upload page lets users select an image file from their device. The image is converted to base64 and saved before moving to the analysis step.
+
+Analyzing Step -
+The analyzing page sends the saved image to the Skinstric phase-two API and stores the returned analysis data.
+
+Results Page -
+The results page shows analysis categories such as demographics, skin type details, cosmetic concerns, and weather.
+
+Demographics Page -
+The demographics page displays predicted race, age, and gender results with confidence percentages. Users can select a different result if the AI estimate is wrong.
+
+Live Link
+
+skinstric-ai-three.vercel.app
+
+<img width="1998" height="1444" alt="image" src="https://github.com/user-attachments/assets/e2fa9dd5-0b2a-4be2-b295-87b44d401287" />
